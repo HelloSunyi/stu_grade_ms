@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+*{
+	padding:0;
+	margin:0;
+	font: 12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;
+}
+.container{
+	text-align:center;
+}
+.container-wrap{
+	border:1px solid #C2C7D0;
+	width:530px;
+	height:550px;
+	margin:0px auto;
+}
+#mainbody .main-header ul{
+	list-style:none;
+	overflow:hidden;
+	
+}
+#mainbody .main-header ul li{
+	float:left;
+}
+#mainbody .main-header ul .register-tab{
+	width:264px;
+}
+#mainbody .main-header ul .register-tab a{		
+	color:#444444;	
+}
+#mainbody .main-header ul .login-tab a{	
+	color:#97AAC8;
+}
+#mainbody .main-header ul .login-tab a,#mainbody .main-header ul .register-tab a{
+	text-align:center;
+	font-weight:bold;
+	font-size:30px;
+	line-height:70px;
+}
+#mainbody .main-header ul .login-tab{
+	width:264px;
+	border-right:1px solid #C2C7D0;
+	border-bottom:1px solid #C2C7D0;
+	background-color:#FAFAFA;
+}
+#mainbody .main-header ul .login-tab,#mainbody .main-header ul .register-tab{
+	height:70px;
+	
+}
+#mainbody .title{
+	font-weight:bold;
+}
+#mainbody .main-header ul li a:hover{
+	text-decoration:none;
+}
+#mainbody .form-group{
+	position:relative;
+	top:30px;
+	left:70px;
+}
+#mainbody .form-group input{
+	margin-bottom:10px;
+	width:350px;
+	height:auto;
+	padding:10px 10px 10px 50px;
+	background:#FFFFFF;
+}
+#mainbody ::-webkit-input-placeholder{
+	font-size:18px;
+	color:#AEABA9;
+	font-weight:500;
+}
+#mainbody .form-group i{
+	position:absolute;
+	top:10px;
+	left:-10px;
+	color:#979faf;
+	width:80px;
+	height:80px;
+	font-size:23px;
+}
+#mainbody .radio{
+	width: 600px;
+	height: 50px;
+	margin: 50px auto;
+	
+}
+#mainbody .radio dt{
+	float:left;
+	font-size:25px;
+	font-weight:600;
+	line-height:50px;
+	margin:-10px 30px 0 30px;
+}
+#mainbody .radio dd{
+	float:left;
+	margin: 5px 30px 0 0;
+	position:relative;
+	padding-left: 20px;
+	line-height:50px;
+	
+}
+#mainbody .radio dl dd b{
+	width:20px;
+	height:20px;
+	background: url(../../img/other/radiobutton.gif) -15px -18px no-repeat;
+	display:inline-block;
+	position:absolute;
+	left:0;
+	top:2px;
+}
+#mainbody .radio dl dd span{
+	font-size: 20px;
+	font-weight:bold;
+}
+#mainbody .radio dl dd span:hover{
+	cursor:pointer;
+	color:#2DC464;
+	text-decoration: underline;
+}
+#mainbody .radio dl dd span:hover b{
+	background-position: -15px -118px;
+}
+#mainbody .radio dl .selected span b,#mainbody .radio dl .selected span:hover b{
+	background-position: -15px -218px;
+}
+#mainbody .mainbody-form .btn{
+	width:120px;
+	height:50px;
+	font-weight:700;
+}
+#mainbody .on{
+	width:400px;
+	height:70px;
+	border:1px solid #F65039;
+	color:#F32753;
+	font-size:25px;
+	background-color:#FEF6F4;
+	border-radius:6px;
+	line-height:70px;
+	margin-left:45px;
+}

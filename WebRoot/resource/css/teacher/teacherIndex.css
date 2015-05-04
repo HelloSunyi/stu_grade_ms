@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+*{
+	padding:0;
+	margin:0;
+	font: Helvetica,Arial,"\5b8b\4f53",sans-serif;
+}
+#header{
+	background-color:#39424E;
+	height:150px;
+	width:100%;
+	border-bottom:7px solid #2AB760;
+}
+#header .container h1{
+	color:#2AB760;
+	margin-left:400px;
+	margin-top:30px;
+}
+#header .container small{
+	color:#2AB760;
+}
+#header .dropdown{
+	position:relative;
+	top:-40px;
+	right:-1000px;
+	width:150px;
+	height:60px;
+	text-align:center;
+	line-height:60px;
+	border-radius:8px;
+}
+#header .dropdown-toggle {
+	color:white;
+	height:100px;
+	font-size:30px;	
+	width:100px;
+}
+#header .dropdown-toggle:hover{
+	text-decoration:none;
+	cursor:pointer;
+}
+#header .dropdown-menu{
+	background-color:#232931;	
+}
+#header .dropdown-menu:hover a{
+	background-color:#232931;	
+}
+#header .dropdown-menu li a{
+	color:#fff;
+	font-weight:bold;
+}
+#mainbody .sidebar{
+	float:left;
+	
+}
+#mainbody .sidebar ul{
+	width:250px;
+	background-color:#39424E;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	margin-top:50px;
+}
+#mainbody .sidebar ul li{
+	width:200px;
+	height:50px;
+	display:inline-block;	
+	background-color:#39424E;
+	margin-left:30px;
+	border:1px solid #39424E;
+	cursor:pointer;
+}
+#mainbody .sidebar ul li:hover span{
+	color:#2AB760;
+}
+#mainbody .sidebar ul .active{
+	color:#2AB760;
+	font-size:25px;
+	font-weight:bold;
+	background-color:#39424E;
+	margin-left:0px;
+}
+#mainbody .sidebar ul li span{
+	font-size:20px;
+	color:#fff;
+	font-weight:bold;
+}
+#mainbody .sidebar ul .active span{
+	color:#2AB760;
+	font-size:25px;
+	font-weight:bold;
+}
+.content{
+	width:800px;
+	margin:0 auto;
+	padding:20px;
+	
+}
+.content .item{
+	padding:10px;
+	margin-bottom: 20px;
+	border:1px dotted #0088bb;
+}
+.content .item h1{
+	font-size: 25px;
+	font-weight: bold;
+	border-bottom: 2px solid #2AB760;
+	margin-bottom: 10px;
+	color:#2AB760;
+}
+.content .item table{
+	width:700px;
+	border:1px solid #2AB760;
+	margin-bottom:20px;
+}
+.content .item table thead th{
+	color:#2AB760;
+}
+.content .item h1{
+	font-size: 25px;
+	font-weight: bold;
+	border-bottom: 2px solid #2AB760;
+	margin-bottom: 10px;
+	color:#2AB760;
+}
+
+
+
+
+
+
+
+

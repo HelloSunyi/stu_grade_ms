@@ -1,0 +1,238 @@
+@CHARSET "UTF-8";
+*{
+	padding:0;
+	margin:0;
+	font: Helvetica,Arial,"\5b8b\4f53",sans-serif;
+}
+#header{
+	background-color:#39424E;
+	height:150px;
+	width:100%;
+	border-bottom:7px solid #2AB760;
+}
+#header .container h1{
+	color:#2AB760;
+	margin-left:400px;
+	margin-top:30px;
+}
+#header .container small{
+	color:#2AB760;
+}
+#header .dropdown{
+	position:relative;
+	top:-40px;
+	right:-1000px;
+	width:150px;
+	height:60px;
+	text-align:center;
+	line-height:60px;
+	border-radius:8px;
+}
+#header .dropdown-toggle {
+	color:white;
+	height:100px;
+	font-size:30px;	
+	width:100px;
+}
+#header .dropdown-toggle:hover{
+	text-decoration:none;
+	cursor:pointer;
+}
+#header .dropdown-menu{
+	background-color:#232931;	
+}
+#header .dropdown-menu:hover a{
+	background-color:#232931;	
+}
+#header .dropdown-menu li a{
+	color:#fff;
+	font-weight:bold;
+}
+#mainbody .mainbody-left{
+	
+}
+#mainbody .mainbody-left ul{
+	display:none;
+}
+#mainbody .mainbody-left .list-menu{
+	margin-top:50px;
+	height:300px;
+	border-radius:10px;
+	background-color:#39424E;
+	width:50px;
+	float:left;
+	color:#2AB760;
+	font-size:30px;
+}
+#mainbody .mainbody-left .list-menu i{
+	margin-left:10px;
+	margin-top:20px;
+}
+#mainbody .mainbody-left .list-menu .tab{
+	background-color:#2AB760;
+	margin-top:50px;
+	height:60px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	width:30px;
+}
+#mainbody .mainbody-left .on{
+	display:inline-block;
+}
+#mainbody .mainbody-left .list-content{
+	margin-top:50px;
+	height:300px;
+	border-radius:10px;
+	background-color:#39424E;
+	width:200px;
+	float:left;
+	font-size:30px;
+	color:#2AB760;
+}
+#mainbody .mainbody-left .list-content i{
+	margin-left:150px;
+	margin-top:20px;
+}
+#mainbody .mainbody-left .capsule{
+	border: 0 solid transparent;
+	-moz-border-top-right-radius:100px;
+	-webkit-borde-top-right-radius:100px;
+	border-top-right-radius:100px;
+	-moz-border-bottom-right-radius:100px;
+	-webkit-border-bottom-right-radius:100px;
+	border-bottom-right-radius:100px;
+	width:200px;
+	height:60px;
+	background:#2AB760;
+	line-height:40px;
+	margin-top:50px;
+}
+#mainbody .mainbody-left .capsule a{
+	font-size:25px;
+	color:#fff;
+	text-decoration:none;
+}
+#mainbody .mainbody-right{
+	margin-left:400px;
+}
+#mainbody .mainbody-right-top{
+	color:#2AB760;
+	font-size:30px;
+	font-weight:bold;
+	margin-top:30px;
+}
+#mainbody .mainbody-right-top .divider{
+	height:2px;
+	width:300px;
+	background-color:#2AB760;
+}
+#mainbody .mainbody-right-middle{
+	margin-top:50px;
+	text-align:center;
+	
+	width:500px;
+	height:400px;
+	border:10px solid #fff;
+	background-color:#fff;
+	padding:50px;
+	position:relative;
+	/*主阴影*/
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset; 
+	-o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+}
+#mainbody .mainbody-right-middle:before { 
+	 z-index: -2;  
+	position: absolute; 
+	/*transparent表示透明*/
+	background: transparent; 
+	/*相对于父盒子的90%宽*/
+	width: 90%; 
+	height: 80%; 
+	content: ''; 
+	left: 20px; 
+	bottom:8px; 
+	
+	/*skew转换成平行四边形，skew(x-degree,y-degree)沿x和y轴转换的角度
+	-12deg表示向右倾斜12度
+	rotate让平行四边形旋转，-4deg表示逆时针旋转4度*/
+	 -webkit-transform: skew(-12deg) rotate(-4deg); 
+	 	-moz-transform:skew(-12deg) rotate(-4deg); 
+	 	-o-transform: skew(-12deg) rotate(-4deg); 
+	 	-ms-transform: skew(-12deg) rotate(-4deg);  
+	
+	-webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+	-moz-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+	-o-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+}
+
+#mainbody .mainbody-right-middle:after { 
+	z-index: -1; 
+	position: absolute; 
+	background: transparent; 
+	width: 90%; 
+	height: 80%; 
+	content: ''; 
+	right:20px;  
+	bottom:8px; 
+	
+	-webkit-transform: skew(12deg) rotate(4deg); 
+	-moz-transform:skew(12deg) rotate(4deg); 
+	-o-transform: skew(12deg) rotate(4deg); 
+	-ms-transform: skew(12deg) rotate(4deg); 
+	
+	-webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+	-moz-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+	-o-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); 
+
+}
+#mainbody .mainbody-right-middle .form-group{
+	margin-bottom:30px;	
+	color:#2AB760;
+}
+#mainbody .mainbody-right-middle form label{
+	font-size:25px;
+	position:relative;
+	top:5px;
+}
+#mainbody .mainbody-right-middle form input{
+	width:250px;
+	font-size:20px;
+	margin-right:5px;
+	color:#000;
+}
+#mainbody .mainbody-right-middle a{
+	margin-left:50px;
+}
+#mainbody .mainbody-right-middle form input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#000;
+}
+#mainbody .mainbody-right-middle form input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#000;
+}
+#mainbody .mainbody-right-middle form input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#000;
+}
+#mainbody .mainbody-right-middle form input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#000;
+}
+
+#mainbody .mainbody-right-middle form input:focus::-webkit-input-placeholder { /* WebKit browsers */
+    color:#000;
+}
+#mainbody .mainbody-right-middle form input:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#000;
+}
+#mainbody .mainbody-right-middle form input:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#000;
+}
+#mainbody .mainbody-right-middle form input:focus:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#000;
+}
+#mainbody .mainbody-right-middle form i{
+	font-size:20px;
+}
+
