@@ -1,4 +1,4 @@
-package com.sgms.user.operate;
+package com.sgms.user.basicOperate;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,8 +14,9 @@ import com.sgms.common.LoginResponse;
 import com.sgms.common.RegisterResponse;
 import com.sgms.common.ResultMapName;
 import com.sgms.common.UserIdentity;
-import com.sgms.database.student.StudentOperateWithDB;
-import com.sgms.database.student.TeacherOperateWithDB;
+import com.sgms.user.databaseOperate.StudentOperateWithDB;
+import com.sgms.user.databaseOperate.TeacherOperateWithDB;
+
 
 public class UserRegister {
 	public Map<String,String> doRegister(String id, String password, String identity){

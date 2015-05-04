@@ -11,8 +11,7 @@ import com.sgms.bean.Course;
 import com.sgms.bean.CourseGrade;
 import com.sgms.bean.Student;
 import com.sgms.bean.Teacher;
-import com.sgms.database.student.StudentOperateWithDB;
-import com.sgms.database.student.TeacherOperateWithDB;
+import com.sgms.user.databaseOperate.TeacherOperateWithDB;
 
 public class TeacherOperateWithDBTest {
 	@Before
@@ -34,12 +33,24 @@ public class TeacherOperateWithDBTest {
 			System.out.println(c.getId() + "   " + c.getName());
 		}
 	}
-	@Test
+	//@Test
 	public void testGetTeacherBasicInfo(){
 		Teacher teacher = new Teacher();
 		teacher.setId("t001");
 		TeacherOperateWithDB operate = new TeacherOperateWithDB();
 		teacher = operate.getTeacherBasicInfo(teacher);
 		System.out.println(teacher.getId() + "   " + teacher.getName() + "	 " + teacher.getTitle());
+	}
+	@Test
+	public void testGetStudentByCourse(){
+		Teacher teacher = new Teacher();
+		teacher.setId("t001");
+		TeacherOperateWithDB operate = new TeacherOperateWithDB();
+		String courseId = "c001";
+		List<Student> studentList = new ArrayList<Student>();
+		studentList = operate.getStudentByCourse(teacher,courseId);
+		for(Student stu:studentList){
+			System.out.println(stu.getId() + "   " + stu.getName());
+		}
 	}
 }

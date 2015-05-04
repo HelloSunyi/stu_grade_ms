@@ -1,4 +1,4 @@
-package com.sgms.user.operate;
+package com.sgms.user.basicOperate;
 
 import java.sql.ResultSet;
 import java.util.HashMap;

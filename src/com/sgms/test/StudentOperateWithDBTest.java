@@ -10,7 +10,7 @@ import org.junit.Test;
 import com.sgms.bean.Course;
 import com.sgms.bean.CourseGrade;
 import com.sgms.bean.Student;
-import com.sgms.database.student.StudentOperateWithDB;
+import com.sgms.user.databaseOperate.StudentOperateWithDB;
 
 public class StudentOperateWithDBTest {
 	@Before

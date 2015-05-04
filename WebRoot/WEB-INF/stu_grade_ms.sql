@@ -67,9 +67,9 @@ INSERT INTO `student_course` VALUES ('s001', 'c001', '80');
 INSERT INTO `student_course` VALUES ('s001', 'c002', '60');
 INSERT INTO `student_course` VALUES ('s001', 'c003', '40');
 INSERT INTO `student_course` VALUES ('s002', 'c001', '100');
-INSERT INTO `student_course` VALUES ('s003', 'c002', '90');
-INSERT INTO `student_course` VALUES ('s004', 'c003', '0');
-INSERT INTO `student_course` VALUES ('s005', 'c003', '10');
+INSERT INTO `student_course` VALUES ('s003', 'c001', '90');
+INSERT INTO `student_course` VALUES ('s004', 'c001', '0');
+INSERT INTO `student_course` VALUES ('s005', 'c001', '10');
 
 
 -- ----------------------------

@@ -1,4 +1,4 @@
-package com.sgms.database.student;
+package com.sgms.user.databaseOperate;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -91,25 +91,51 @@ public class TeacherOperateWithDB {
 			}
 			return teacher;
 		}
-		/*
-		//取得每门课同学信息
-		public List<Student> getStudentByCourse(List<Course> courseList){
+		//设置教师密码
+		public boolean setTeacherPassword(Teacher teacher){
+			String sql="update teacher "+" set password='"+teacher.getPassword()
+					+"' "+" where id='"+teacher.getId()+"'";
+			SQL db = new SQL();
+			if(db.executeUpdate(sql) > 0)return true;
+			else return false;
+		}
+		
+		//取得该课同学信息
+		public List<Student> getStudentByCourse(Teacher teacher,String courseId){
 			List<Student> studentList = new ArrayList<Student>();
-			List<Student> stuList = new ArrayList<Student>();
-			for(Course course:courseList){
-				String sql = "select id,name,password,class,major,cid from student," +
-						"student_course where cid='"+course.getId()+"' and sid=id";
-				SQL db = new SQL();
-				ResultSet rs = db.executeQuery(sql);
-				stuList = assignStudent(rs);
-				for(Student stu:stuList){
-					studentList.add(stu);
-				}
-			}
+			String sql = "select id,name,password,class,major,grade from student," +
+					"student_course where cid='"+courseId+"' and sid=id";
+			SQL db = new SQL();
+			ResultSet rs = db.executeQuery(sql);
+			studentList = assignStudent(rs);
 			return studentList;
 		}
-		*/
-		/*
+		//取得该科信息
+		public Course getCourseInfo(String courseId){
+			Course course = new Course();
+			String sql = "select id,name from course where id='"+courseId+"'";
+			SQL db = new SQL();
+			ResultSet rs = db.executeQuery(sql);
+			course = assignCourseInfo(rs);
+			return course;
+		}
+		//修改学生成绩
+		？？？
+		public booleanm odifyStuCourse(stu,idList)
+		private Course assignCourseInfo(ResultSet rs){
+			Course course = new Course();
+			try {
+				while(rs.next()){				
+					course.setId(rs.getString("id"));
+					course.setName(rs.getString("name"));
+					
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return course;
+		}
 		private List<Student> assignStudent(ResultSet rs){
 			List<Student> studentList = new ArrayList<Student>();
 			try {
@@ -120,7 +146,7 @@ public class TeacherOperateWithDB {
 					stu.setPassword(rs.getString("password"));
 					stu.setClassNo(rs.getString("class"));
 					stu.setMajor(rs.getString("major"));
-					stu.setCourse(rs.getString("cid"));
+					stu.setGrade(rs.getString("grade"));
 					studentList.add(stu);
 				}
 			} catch (SQLException e) {
@@ -129,7 +155,7 @@ public class TeacherOperateWithDB {
 			}
 			return studentList;
 		}
-		*/
+		
 		private List<Course> assignCourse(ResultSet rs){
 			List<Course> courseList = new ArrayList<Course>();
 			int courseNo = 1;

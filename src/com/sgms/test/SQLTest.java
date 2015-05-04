@@ -11,7 +11,6 @@ import org.junit.Test;
 import com.sgms.bean.SQL;
 import com.sgms.bean.Student;
 import com.sgms.common.LoginResponse;
-import com.sgms.user.operate.UserLogin;
 
 public class SQLTest {
 	@Before

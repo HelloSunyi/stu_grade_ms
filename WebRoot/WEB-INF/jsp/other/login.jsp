@@ -52,7 +52,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<dl>
 						        <dd class="selected" name="student"><span><b></b>学生</span></dd>
 						        <dd name="teacher"><span><b></b>教师</span></dd>
+						        <!--
 						        <dd name="manager"><span><b></b>管理员</span></dd>
+						          -->
+						        
 						    </dl>
 						</div>
 						

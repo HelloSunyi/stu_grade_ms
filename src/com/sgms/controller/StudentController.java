@@ -22,7 +22,7 @@ import com.sgms.common.DeleteResponse;
 import com.sgms.common.ResultMapName;
 import com.sgms.common.SelectCourseResponse;
 import com.sgms.common.UpdateResponse;
-import com.sgms.database.student.StudentOperateWithDB;
+import com.sgms.user.databaseOperate.StudentOperateWithDB;
 
 @Controller
 @RequestMapping("/student")
@@ -104,7 +104,6 @@ public class StudentController {
 	public @ResponseBody
 	Map doSelectCourse(@RequestParam("idList[]") String[] idList,
 						HttpSession session,Model model){
-		logger.info("idlist:: "+idList[0]);
 		Student stu = new Student();
 		StudentOperateWithDB operate = new StudentOperateWithDB();
 		stu.setId(session.getAttribute("username").toString());

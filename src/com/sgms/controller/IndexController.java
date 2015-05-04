@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sgms.common.LoginResponse;
-import com.sgms.user.operate.UserLogin;
-import com.sgms.user.operate.UserRegister;
+import com.sgms.user.basicOperate.UserLogin;
+import com.sgms.user.basicOperate.UserRegister;
 
 @Controller
 @RequestMapping("/index")

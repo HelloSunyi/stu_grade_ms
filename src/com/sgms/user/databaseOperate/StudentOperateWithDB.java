@@ -1,4 +1,4 @@
-package com.sgms.database.student;
+package com.sgms.user.databaseOperate;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

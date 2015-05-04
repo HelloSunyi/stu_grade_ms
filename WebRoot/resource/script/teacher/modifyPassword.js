@@ -18,15 +18,27 @@ $(function(){
 		$("#mainbody .mainbody-left .list-content").removeClass("on");
 		$("#mainbody .mainbody-left .list-menu").addClass("on");
 	});
+	
 	//表单提交
 	$("#mainbody .mainbody-right-middle .save-btn").click(function(){	
+		var password1 = $("#password1").val();
+		var password2 = $("#password2").val();
+		if(password1 == ""||password2 == ""){
+			$("#mymodal .modal-body p").html("密码不能为空，请重新输入！");	
+			$("#mymodal").modal();
+			return;
+		}
+		if(password1 != password2){
+			$("#mymodal .modal-body p").html("两次密码输入不相同，请重新输入！");	
+			$("#mymodal").modal();
+			return;
+		}
 		$.ajax({
 			type : "post",
-			url : "teacher/modifyBasicInfo",
+			url : "teacher/doModifyPassword",
 			dataType : "json",
 			data : {
-				"username":$("#username").val(),
-				"title":$("#title").val(),
+				"password":password1		
 			},
 			success : function(result) {					
 				//window.location.href="student/basicInfo";
@@ -35,17 +47,6 @@ $(function(){
 			}
 		}); 	
 	});
-	
-	//input focus:
-	$("#mainbody .form-group input").focus(function(){
-		$(this).css("color","gray");
-	});
-	$("#mainbody .form-group input").blur(function(){
-		$(this).css("color","black");
-	});
-	$("#mainbody .form-group input").bind("input propertychange",function() { 
-		$(this).css("color","black");
-	}); 
 });
 
 

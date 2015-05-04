@@ -16,10 +16,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 	
-	<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/teacher/basicInfo.css" type="text/css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/teacher/modifyPassword.css" type="text/css">
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/bootstrap_css/bootstrap.min.css" type="text/css">
 	<script src="<%=request.getContextPath()%>/resource/script/jquery-1.11.1.min.js"></script>
-	<script src="<%=request.getContextPath()%>/resource/script/teacher/basicInfo.js"></script>
+	<script src="<%=request.getContextPath()%>/resource/script/teacher/modifyPassword.js"></script>
 	<script src="<%=request.getContextPath()%>/resource/script/bootstrap_js/bootstrap.min.js"></script>
   </head>
   
@@ -46,40 +46,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	
   	<!-- mainbody 标签开始 -->
   	<div id="mainbody">
-  			<div class="mainbody-left">
-  				<ul class="list-group list-menu on">
-  					<i class="glyphicon glyphicon-chevron-right"></i>
-  					<li class="list-group-item tab"></li>
-  				</ul>
-  				<ul class="list-group list-content">
-  					<i class="glyphicon glyphicon-chevron-left"></i>
-  					<li class="list-group-item capsule"><a href="teacher/index">授课列表</a></li>
-  				</ul>	
-  			</div>
+		<div class="mainbody-left">
+			<ul class="list-group list-menu on">
+				<i class="glyphicon glyphicon-chevron-right"></i>
+				<li class="list-group-item tab"></li>
+			</ul>
+			<ul class="list-group list-content">
+				<i class="glyphicon glyphicon-chevron-left"></i>
+				<li class="list-group-item capsule"><a href="teacher/index">教师授课</a></li>
+			</ul>	
+		</div>
   			<div class="mainbody-right">
   				<div class="mainbody-right-top">
 		  			<i class="glyphicon glyphicon-th-list"></i>
-		  			<span class="basic-info">基本信息</span>
+		  			<span class="basic-info">修改密码</span>
 		  			<div class="divider"></div>
   				</div>
-  				<div class="mainbody-right-middle">
+  				<div class="mainbody-right-middle">	
   					<form class="form-inline" role="form" >	
 	  					<div class="form-group">
-	  						<label>姓名：</label>			   
-						    <input id="username" name="username" type="text" 
-						    class="form-control"  value="${teacher.name }"/>
+	  						<label>新密码：</label>			   
+						    <input id="password1" name="password1" type="text" class="form-control"/>
 						    <i class="glyphicon glyphicon-pencil"></i>	
 						</div>
 						<div class="form-group">
-							<label>职称：</label>		   
-						    <input id="title" type="text"  class="form-control" 
-						    name="title" value="${teacher.title }" />
+							<label>确认密码：</label>			   
+						    <input id="password2" name="password2" type="text" class="form-control"/>
 						    <i class="glyphicon glyphicon-pencil"></i>
 						</div>
-					</form>
-					<a class="btn btn-success btn-lg save-btn">保存修改</a>
-					<a href="teacher/basicInfo" class="btn btn-success btn-lg reset-btn">重置</a>
-	  				
+					</form>		
+					<a class="btn btn-success btn-lg save-btn">保存修改</a>	
   				</div>
   			</div>
   			<div class="modal" id="mymodal">
@@ -87,7 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			        <div class="modal-content">
 			            <div class="modal-header">
 			    			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-							<h4 class="modal-title">修改基本信息结果</h4>
+							<h4 class="modal-title">修改密码结果</h4>
 						</div>
 						<div class="modal-body">
 							<p></p>

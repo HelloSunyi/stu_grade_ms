@@ -8,19 +8,20 @@ public class Student {
 	private String password;
 	private String classNo;
 	private String major;
-	private String course;
-	public String getCourse() {
-		return course;
+	private String grade;
+	public String getGrade() {
+		return grade;
 	}
-	public void setCourse(String course) {
-		this.course = course;
-	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}	
 	public Student(){
 		name = null;
 		id = null;
 		password = null;
 		classNo = null;
 		major = null;
+		grade = null;
 	}
 	public String getName(){
 		return name;
@@ -52,51 +53,4 @@ public class Student {
 	public void setMajor(String major) {
 		this.major = major;
 	}	
-	
-	/*
-	//取得所有学生
-	public ResultSet getAllStudent(){
-		String sql = "select * from student";
-		SQL db = new SQL();
-		ResultSet rs = db.executeQuery(sql);
-		return rs;		
-	}
-	//根据sid取得sname
-	public ResultSet getSnameById(String id){
-		String sql = "select name from student where id='" + id + "'";
-		SQL db = new SQL();
-		ResultSet rs = db.executeQuery(sql);
-		return rs;
-	}
-	//根据sid取得smajor
-	public ResultSet getMajorById(String id){
-		String sql = "select major from student where id='" + id + "'";
-		SQL db = new SQL();
-		ResultSet rs = db.executeQuery(sql);
-		return rs;
-	}
-	//根据sclass取得sname 和 sid
-	public ResultSet getNameAndIdByClass(String classNo){
-		String sql = "select id,name from student where classNo='" + classNo + "'";
-		SQL db = new SQL();
-		ResultSet rs = db.executeQuery(sql);
-		return rs;
-	}
-	
-	//根据id删除学生
-	public int deleteStudent(String id){
-	    int num = 0;
-	    String sql = "delete  from student where id ='" + id + "' ";
-	    SQL db = new SQL();
-	    num = db.executeDelete(sql);
-	    return num;
-	}  
-	//更新学生信息
-	public void updateStudent(){
-		String sql = "update student " + " set name='" + name + "'," + " password='" + password
-		 + "' " + " where id='" + id + "'";
-		SQL db = new SQL();
-		db.executeInsert(sql);
-	}
-	*/
 }

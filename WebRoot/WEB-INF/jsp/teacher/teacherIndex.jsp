@@ -4,8 +4,6 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="com.sgms.bean.Student" %>
-<%@ page import="com.sgms.bean.Course" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -47,13 +45,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	</div>
   	<!-- header 标签结束 -->
   	<!-- mainbody 标签开始 -->
-  	<div id="mainbody"> 	
-  		
+  	<div id="mainbody"> 	 		
 		<div class="sidebar">
 			<ul class="list-group list-unstyled">
 				<li class="active list-group-item ">授课课程</li>
 				<c:forEach items="${courseList}" var="clist">
-					<li class="list-group-item" >
+					<li class="list-group-item" onclick="document.getElementById('item${clist.courseNo}').scrollIntoView();">
 						<span class="course-id">[${clist.id }]</span>
 						<span class="course-name">${clist.name }</span>					
 					</li>
@@ -62,28 +59,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div class="content">
 			<c:forEach items="${courseList}" var="clist">
-				<div class="item" >
-					<h1>${clist.name }</h1>			  			
-						    <table class="table table-hover">
-							   <thead>
-							     <tr> 
-							       <th>课程号</th>
-							       <th>课程名</th>
-							       <th>学分</th>
-							       <th>上课时间</th>
-							       <th>教室</th>  
-							     </tr>
-							   </thead>
-							   <tbody>
-			  					 <tr class="success">  			  					 	 
-								    <td>${clist.id }</td>
-								    <td>${clist.name }</td>
-								    <td>${clist.credit }</td>
-								    <td>${clist.time }</td>
-								    <td>${clist.address }</td>					    
-							     </tr>	 			        
-							   </tbody>
-						 	</table>							  		
+				<div class="item" id="item${clist.courseNo}">
+					<h1>[<span>${clist.id }</span>]${clist.name }</h1>			  			
+					<table class="table table-hover">
+						<thead>
+							<tr> 
+							   <th>课程号</th>
+							   <th>课程名</th>
+							   <th>学分</th>
+							   <th>上课时间</th>
+							   <th>教室</th>  
+							</tr>
+						</thead>
+						<tbody>
+			  				<tr class="success">  			  					 	 
+								<td>${clist.id }</td>
+								<td>${clist.name }</td>
+								<td>${clist.credit }</td>
+								<td>${clist.time }</td>
+								<td>${clist.address }</td>					    
+							</tr>	 			        
+						</tbody>
+					</table>	
+					<a href="teacher/getCourseStudent?courseId=${clist.id }" class="btn btn-success btn-lg search-btn">查看该课学生信息</a>					  		
 				</div>
 			</c:forEach>
 		</div>
