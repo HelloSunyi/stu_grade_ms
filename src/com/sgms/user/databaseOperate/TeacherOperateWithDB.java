@@ -120,8 +120,15 @@ public class TeacherOperateWithDB {
 			return course;
 		}
 		//修改学生成绩
-		？？？
-		public booleanm odifyStuCourse(stu,idList)
+		public boolean modifyStuCourse(String[] studentList,String courseId,String[] gradeList){
+			for(int i = 0;i < gradeList.length;i++){
+				String sql = "update student_course set grade='"+gradeList[i]
+						+"' where sid='"+studentList[i]+"' and cid='"+courseId+"'";
+				SQL db = new SQL();
+				if(db.executeUpdate(sql) == 0)return false;
+			}
+			return true;			
+		}
 		private Course assignCourseInfo(ResultSet rs){
 			Course course = new Course();
 			try {

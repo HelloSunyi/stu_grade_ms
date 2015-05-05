@@ -32,15 +32,17 @@ $(function(){
 	
 	//表单提交
 	$("#mainbody .mainbody-right .save-btn").click(function(){	
-		$("#mymodal .modal-body p").html("确认要修改学生成绩吗？");	
-		$("#mymodal").modal();				
+		$("#mymodal2 .modal-body p").html("确认要修改学生成绩吗？");	
+		$("#mymodal2").modal();				
 	});
 	
 	$("#confirm-btn").click(function(){
-		var gradeList=[];
-		gradeList=getGradeList();
+		var gradeList = [];
+		gradeList = getGradeList();
+		var studentList = [];
+		studentList =getStudentList();
 		var courseId = $("#mainbody .mainbody-right h1 span").html();
-		ajaxModifyGradeList(idList,courseId);
+		ajaxModifyGradeList(gradeList,studentList,courseId);
 	});
 });
 //取得要删除课程的id
@@ -51,13 +53,23 @@ function getGradeList(){
 	});
 	return gradeList;
 }
-function ajaxModifyGradeList(idList,courseId){
+function getStudentList(){
+	var studentList=[];
+	$("#mainbody input[name='grade']").each(function() {
+		var tr = $(this).closest("tr");
+		var idStr = $(tr).children("td").eq(0).html();
+		studentList.push(idStr);
+	});
+	return studentList;
+}
+function ajaxModifyGradeList(gradeList,studentList,courseId){
 	$.ajax({
 		type : "post",
 		url : "teacher/doModifyGrade",
 		dataType : "json",
 		data : {
-			idList:idList,
+			gradeList:gradeList,
+			studentList:studentList,
 			"courseId":courseId
 		},
 		success : function(result) {					

@@ -51,8 +51,8 @@ function getSelectIdList(){
 	var idList=[];
 	$("#mainbody input[name='box']").each(function() {
 		if ($(this)[0].checked) {
-			var tr = $(this).closest('tr');
-			var idStr = $(tr).children('td').eq(1).html();
+			var tr = $(this).closest("tr");
+			var idStr = $(tr).children("td").eq(1).html();
 			idList.push(idStr);
 		}
 	});

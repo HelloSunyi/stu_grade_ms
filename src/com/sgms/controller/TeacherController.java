@@ -105,9 +105,6 @@ public class TeacherController {
 		teacher.setId(session.getAttribute("username").toString());
 		List<Student> studentList = new ArrayList<Student>();
 		studentList = operate.getStudentByCourse(teacher,courseId);
-		for(Student s:studentList){
-			logger.info(s.getId());
-		}
 		model.addAttribute("studentList", studentList);
 		Course course = new Course();
 		course = operate.getCourseInfo(courseId);
@@ -117,11 +114,17 @@ public class TeacherController {
 	
 	@RequestMapping(value="/doModifyGrade",method = RequestMethod.POST)
 	public @ResponseBody
-	Map doSelectCourse(@RequestParam("idList[]") String[] idList,
+	Map doSelectCourse(@RequestParam("gradeList[]") String[] gradeList,
+					   @RequestParam("studentList[]") String[] studentList,
 					   @RequestParam("courseId") String courseId,
 						HttpSession session,Model model){
 		Map<String,String> result = new HashMap<String,String>();
-		if(operate.modifyStuCourse(stu,idList)){
+		TeacherOperateWithDB operate = new TeacherOperateWithDB();
+		logger.info("c:	"+courseId);
+		for(int i=0;i<gradeList.length;i++){
+			logger.info(studentList[i]+"	"+gradeList[i]);
+		}
+		if(operate.modifyStuCourse(studentList,courseId,gradeList)){
 			result.put(ResultMapName.ResultString,UpdateResponse.UpdateSuccessString);
 			result.put(ResultMapName.ResultFlag,UpdateResponse.UpdateSuccessFlag);
 		}

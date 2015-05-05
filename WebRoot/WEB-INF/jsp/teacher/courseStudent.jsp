@@ -85,10 +85,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</c:forEach> 			        
 						</tbody>
 					</table>	
-					<a class="btn btn-success btn-lg search-btn">保存成绩</a>	
+					<a class="btn btn-success btn-lg save-btn">保存成绩</a>	
 					<a href="teacher/getCourseStudent" class="btn btn-success btn-lg reset-btn">重置</a>					  				
 		</div>
   		<div class="modal" id="mymodal">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			    		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">提示信息</h4>
+					</div>
+					<div class="modal-body">
+						<p></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="modal" id="mymodal2">
 			<div class="modal-dialog">
 			    <div class="modal-content">
 			        <div class="modal-header">
@@ -104,7 +120,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->	
+		</div><!-- /.modal -->
   	</div>
   	<!-- mainbody 标签结束 -->
   	
